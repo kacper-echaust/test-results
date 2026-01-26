@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        yellow: "#F3C11B",
-        orange: "#F65009",
-        blue: "#3D38F5",
-        purple: "#8A38F5",
-        green: "#198F51",
-        graphite: "#2F2F2F",
-        white: "#FBFBFB",
-        secondWhite: "#E5E5E5",
+        brandYellow: "#F3C11B",
+        brandOrange: "#F65009",
+        brandBlue: "#3D38F5",
+        brandPurple: "#8A38F5",
+        brandGreen: "#198F51",
+        brandGraphite: "#2F2F2F",
+        brandWhite: "#FBFBFB",
+        brandSecondWhite: "#E5E5E5",
       },
     },
   },
