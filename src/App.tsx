@@ -1,5 +1,11 @@
+import { PatronitesSections } from "./Components/PatronitesSection";
+
 const App = () => {
-  return <></>;
+  return (
+    <>
+      <PatronitesSections />
+    </>
+  );
 };
 
 export { App };
