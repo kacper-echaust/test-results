@@ -1,3 +1,5 @@
+import { AmbassadorsSection } from "./Components/AmbassadorsSection";
+import { HabitSection } from "./Components/HabitSection";
 import { PatronitesSections } from "./Components/PatronitesSection";
 import { StartSection } from "./Components/StartSection";
 import Footer from "./Components/layout/Footer/Footer";
@@ -8,6 +10,8 @@ const App = () => {
     <>
       <Header />
       <StartSection />
+      <HabitSection />
+      <AmbassadorsSection />
       <PatronitesSections />
       <Footer />
     </>
