@@ -1,6 +1,6 @@
 const StartSection = () => {
   return (
-    <section className="py-16 bg-white relative before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[url('/backgrounds/straight-lines.svg')] before:bg-[length:500px] before:bg-repeat before:opacity-30">
+    <section className="py-16 bg-white relative before:absolute  before:h-full before:w-full overflow-hidden before:bg-[url('/backgrounds/straight-lines.svg')] before:bg-cover before:bg-no-repeat before:opacity-30">
       <div className="mt-5 ml-8 md:ml-12 lg:ml-[75px]">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
           <span className="text-brandGraphite">Masz wpływ</span>
@@ -16,9 +16,7 @@ const StartSection = () => {
 
         <a
           href="#TODO"
-          className="relative z-[999] pointer-events-auto bg-brandYellow text-black font-bold text-lg px-4 py-2 rounded-full border-2 border-black shadow-lg transition-all duration-300 -ml-4 hover:bg-black hover:text-white"
-
-          // plus cien i w lewo - zjustowac tekst, ale ramka moze byc w lewo
+          className="relative pointer-events-auto bg-brandYellow text-black font-bold text-lg px-4 py-2 rounded-full border-2 border-black shadow-lg transition-all duration-300 -ml-4 hover:bg-black hover:text-white"
         >
           Dołącz do inicjatywy!
         </a>
