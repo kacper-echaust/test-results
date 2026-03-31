@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { register } from "swiper/element/bundle";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
+import { Carousel } from "./shared/Carousel";
 
 const cardText = [
   "Cieszenie się chwilą",
@@ -14,6 +15,7 @@ const cardText = [
 ];
 
 const HabitSection = () => {
+  const swiperRef = useRef<SwiperType | null>(null);
   useEffect(() => {
     register();
   }, []);
@@ -25,49 +27,17 @@ const HabitSection = () => {
           Zbadaliśmy takie mikro-nawyki jak:
         </h3>
 
-        <div className="w-full max-w-7xl mx-auto min-w-0 ">
-          <Swiper
-            className=" [&_.swiper-button-prev]:text-white [&_.swiper-button-next]:text-white "
-            modules={[Navigation, Pagination, Autoplay]}
-            slidesPerView={1}
-            spaceBetween={20}
-            navigation
-            pagination={{ clickable: true }}
-            loop
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-              },
-              1280: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-              },
-            }}
-          >
-            {cardText.map((card, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-gray-200 rounded-lg w-[192px] h-[256px] relative mx-auto shadow-xl">
-                  <div className="absolute bottom-0 text-sm h-1/4 bg-white w-full rounded-b-lg text-center flex items-center justify-center px-2 text-black font-semibold">
-                    {card}
-                  </div>
+        <Carousel swiperRef={swiperRef}>
+          {cardText.map((card, index) => (
+            <SwiperSlide key={index} className="flex justify-center">
+              <div className="bg-gray-200 rounded-lg min-w-[100px] max-w-[280px] h-[300px] relative mx-auto shadow-xl">
+                <div className="absolute bottom-0 text-sm h-1/4 bg-white w-full rounded-b-lg text-center flex items-center justify-center px-2 text-black font-semibold">
+                  {card}
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Carousel>
       </div>
 
       <div className="text-white flex items-center flex-col h-1/3 pt-12">
