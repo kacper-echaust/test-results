@@ -1,4 +1,3 @@
-import arrow from "../../assets/img/arrow.png";
 import { useForm } from "react-hook-form";
 
 type FormType = {
@@ -72,7 +71,6 @@ const Form = () => {
         ></span>
         Wyrażam zgodę na otrzymywanie newslettera Fundacji Szczęśliwsi na podany
         adres e-mail
-        <img src={arrow} alt="arrow" className="size-6 absolute right-0" />
       </label>
     </form>
   );
