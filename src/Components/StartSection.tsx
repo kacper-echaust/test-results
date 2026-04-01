@@ -1,7 +1,9 @@
+import ButtonLink from "./shared/ButtonLink";
+import woman from "../assets/img/woman.png";
 const StartSection = () => {
   return (
-    <section className="py-16 bg-white relative before:absolute  before:h-full before:w-full overflow-hidden before:bg-[url('/backgrounds/straight-lines.svg')] before:bg-cover before:bg-no-repeat before:opacity-30">
-      <div className="mt-5 ml-8 md:ml-12 lg:ml-[75px]">
+    <section className="h-[75vh] bg-white relative before:absolute  before:h-full before:w-full overflow-hidden before:bg-[url('/backgrounds/straight-lines.svg')] before:bg-cover before:bg-no-repeat before:opacity-30 grid grid-cols-2">
+      <div className=" flex flex-col  justify-center  h-full px-12">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
           <span className="text-brandGraphite">Masz wpływ</span>
           <br />
@@ -13,14 +15,22 @@ const StartSection = () => {
           <span className="text-brandGraphite">Zrób to </span>
           <span className="text-brandBlue">#MałymiKrokami.</span>
         </p>
-
-        <a
-          href="#TODO"
-          className="relative pointer-events-auto bg-brandYellow text-black font-bold text-lg px-4 py-2 rounded-full border-2 border-black shadow-lg transition-all duration-300 -ml-4 hover:bg-black hover:text-white"
+        <p className="font-thin text-sm text-center  mb-4 px-56">
+          Chcemy pokazać, że zmiany na lepsze nie oznaczają wywracania życia do
+          góry nogami. Wystarczy{" "}
+          <span className="font-bold">systematyka i 10 minut dziennie!</span>
+        </p>
+        <ButtonLink
+          color="yellow"
+          variant="solid"
+          href="#"
+          className="border-black border px-4 w-full max-w-48 rounded-2xl font-thin text-center z-20"
         >
           Dołącz do inicjatywy!
-        </a>
-        <div className="h-[100px]"></div>
+        </ButtonLink>
+      </div>
+      <div className="w-full h-full flex items-center justify-center">
+        <img src={woman} alt="" className="object-cover w-3/4" />
       </div>
     </section>
   );
