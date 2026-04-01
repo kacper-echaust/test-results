@@ -21,11 +21,27 @@ const HabitSection = () => {
   }, []);
 
   return (
-    <section className="bg-brandGreen flex flex-col justify-around px-6 py-24 bg-[url('/backgrounds/dots.svg')] overflow-hidden">
+    <section
+      className="bg-brandYellow flex flex-col justify-around px-6 py-12 bg-[url('/backgrounds/dots.svg')] overflow-hidden"
+      style={{
+        backgroundImage: "url('/backgrounds/dots.png')",
+      }}
+    >
+      <div className=" flex items-center flex-col h-1/3">
+        <h3 className="font-bold text-xl mb-4">Co chcieliśmy sprawdzić?</h3>
+        <div className="flex justify-around flex-wrap text-center w-full min-h-32 items-center gap-8 mb-16 md:mb-0">
+          <p className="max-w-xs leading-relaxed opacity-90">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            aliquid
+          </p>
+          <p className="max-w-xs leading-relaxed opacity-90">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            aliquid
+          </p>
+        </div>
+      </div>
       <div className="flex flex-col items-center font-bold text-xl gap-10 w-full">
-        <h3 className="text-white text-center">
-          Zbadaliśmy takie mikro-nawyki jak:
-        </h3>
+        <h3 className=" text-center">Zbadaliśmy takie mikro-nawyki jak:</h3>
 
         <Carousel swiperRef={swiperRef}>
           {cardText.map((card, index) => (
@@ -38,20 +54,6 @@ const HabitSection = () => {
             </SwiperSlide>
           ))}
         </Carousel>
-      </div>
-
-      <div className="text-white flex items-center flex-col h-1/3 pt-12">
-        <h3 className="font-bold text-xl mb-4">Co chcieliśmy sprawdzić?</h3>
-        <div className="flex justify-around flex-wrap text-center w-full min-h-32 items-center gap-8">
-          <p className="max-w-xs leading-relaxed opacity-90">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-            aliquid
-          </p>
-          <p className="max-w-xs leading-relaxed opacity-90">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-            aliquid
-          </p>
-        </div>
       </div>
     </section>
   );
