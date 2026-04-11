@@ -9,7 +9,12 @@ const AmbassadorsSection = () => {
   const ambassadors = [1, 2, 3, 4, 5, 6];
 
   return (
-    <section className="bg-brandBlue py-24 bg-[url('/backgrounds/dots.svg')] overflow-hidden">
+    <section
+      className="bg-brandBlue py-24  overflow-hidden"
+      style={{
+        backgroundImage: "url('/backgrounds/dots.png')",
+      }}
+    >
       <div className="flex flex-col items-center gap-10 w-full px-6">
         <div className="text-white text-center">
           <h3 className="font-bold text-xl  tracking-wider mb-2">
