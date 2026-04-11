@@ -1,4 +1,5 @@
 import { AmbassadorsSection } from "./Components/AmbassadorsSection";
+import { EbookSection } from "./Components/EbookSection";
 import { HabitSection } from "./Components/HabitSection";
 import { NewsletterSection } from "./Components/Newsletter/NewsletterSection";
 import { PatronitesSections } from "./Components/PatronitesSection";
@@ -15,6 +16,7 @@ const App = () => {
       <TestResultsSection />
       <HabitSection />
       <NewsletterSection />
+      <EbookSection />
       <AmbassadorsSection />
       <PatronitesSections />
       <Footer />
