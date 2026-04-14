@@ -1,5 +1,6 @@
 import ebookImg from "../assets/img/ebook.png";
 import ButtonLink from "./shared/ButtonLink";
+import { AiOutlineDownload } from "react-icons/ai";
 const EbookSection = () => {
   return (
     <section
@@ -29,8 +30,9 @@ const EbookSection = () => {
             color="yellow"
             href="#"
             variant="solid"
-            className="border border-black rounded-3xl w-32 text-sm  md:w-48 text-center font-thin"
+            className="border border-black w-32 text-base  md:w-48 text-center font-thin flex justify-around items-center"
           >
+            <AiOutlineDownload className="text-2xl" />
             Pobierz ebook
           </ButtonLink>
         </div>
